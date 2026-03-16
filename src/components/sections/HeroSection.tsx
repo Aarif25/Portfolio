@@ -7,74 +7,89 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden pb-12 md:pb-20">
       <NeuralLattice />
 
-      <div className="relative z-10 container mx-auto px-6 text-center">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-          className="font-mono text-xs md:text-sm uppercase tracking-[0.3em] text-primary mb-6 glow-text-cyan"
+      <div className="relative z-10 container mx-auto px-6">
+        {/* Top tagline */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 1 }}
+          className="absolute top-8 md:top-12 left-6 right-6 flex justify-between items-start"
         >
-          [SYSTEM_INIT] // PORTFOLIO_v2.0
-        </motion.p>
+          <p className="font-mono text-[10px] md:text-xs text-muted-foreground tracking-[0.2em] uppercase">
+            Portfolio — 2024/26
+          </p>
+          <p className="font-mono text-[10px] md:text-xs text-muted-foreground tracking-[0.2em] uppercase hidden md:block">
+            Based in India
+          </p>
+        </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="text-display font-mono font-bold tracking-tighter mb-4"
-        >
-          <span className="gradient-text">AARIF</span>
-          <br />
-          <span className="text-foreground">MANSOORI</span>
-        </motion.h1>
+        {/* Main name — editorial asymmetric layout */}
+        <div className="mb-12 md:mb-20">
+          <motion.h1
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            className="text-huge font-bold tracking-tighter"
+          >
+            <span className="block text-foreground">Aarif</span>
+          </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            className="text-huge font-bold tracking-tighter md:text-right"
+          >
+            <span className="gradient-text-warm">Mansoori</span>
+          </motion.h1>
+        </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.8 }}
-          className="font-mono text-sm md:text-base text-muted-foreground max-w-xl mx-auto mb-10 tracking-wide"
-        >
-          Full Stack Developer // AI & ML Enthusiast
-        </motion.p>
-
+        {/* Bottom bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          transition={{ delay: 1.1, duration: 0.8 }}
+          className="flex flex-col md:flex-row md:items-end justify-between gap-8"
         >
-          <button
-            onClick={() => scrollTo('projects')}
-            className="px-8 py-3 rounded-lg bg-primary text-primary-foreground font-mono text-sm uppercase tracking-widest hover:opacity-90 transition-opacity glow-border"
-          >
-            View Projects
-          </button>
-          <button
-            onClick={() => scrollTo('contact')}
-            className="px-8 py-3 rounded-lg border border-border hover:border-primary/50 text-foreground font-mono text-sm uppercase tracking-widest transition-colors"
-          >
-            Contact
-          </button>
+          <div className="max-w-md">
+            <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+              Full-stack developer & AI enthusiast building 
+              <span className="text-foreground"> thoughtful digital experiences</span> — 
+              one commit at a time.
+            </p>
+          </div>
+          <div className="flex gap-3">
+            <button
+              onClick={() => scrollTo('projects')}
+              className="px-6 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:brightness-110 transition-all"
+            >
+              See my work
+            </button>
+            <button
+              onClick={() => scrollTo('contact')}
+              className="px-6 py-2.5 rounded-full border border-border text-foreground text-sm font-medium hover:border-primary/50 transition-colors"
+            >
+              Say hello
+            </button>
+          </div>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll line */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        transition={{ delay: 2 }}
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
         <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="w-5 h-8 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-1.5"
-        >
-          <div className="w-1 h-1.5 rounded-full bg-primary" />
-        </motion.div>
+          animate={{ height: ['0%', '100%'] }}
+          transition={{ repeat: Infinity, duration: 1.5, repeatDelay: 0.5 }}
+          className="w-px bg-primary/40 origin-top"
+          style={{ height: 40 }}
+        />
       </motion.div>
     </section>
   );

@@ -24,36 +24,34 @@ const Navigation = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'glass-surface' : ''
+        scrolled ? 'bg-background/80 backdrop-blur-xl border-b border-border/30' : ''
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="font-mono text-lg font-bold tracking-tighter">
+      <div className="container mx-auto flex items-center justify-between py-5 px-6">
+        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-base font-semibold tracking-tight">
           <span className="text-primary">A</span>
           <span className="text-muted-foreground">M</span>
         </button>
 
-        {/* Desktop */}
         <div className="hidden md:flex gap-8">
           {navItems.map((item) => (
             <button
               key={item}
               onClick={() => scrollTo(item)}
-              className="text-sm text-muted-foreground hover:text-primary transition-colors font-mono uppercase tracking-widest"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors tracking-wide uppercase"
             >
               {item}
             </button>
           ))}
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden flex flex-col gap-1.5"
         >
-          <motion.span animate={{ rotate: mobileOpen ? 45 : 0, y: mobileOpen ? 8 : 0 }} className="block w-6 h-0.5 bg-foreground" />
-          <motion.span animate={{ opacity: mobileOpen ? 0 : 1 }} className="block w-6 h-0.5 bg-foreground" />
-          <motion.span animate={{ rotate: mobileOpen ? -45 : 0, y: mobileOpen ? -8 : 0 }} className="block w-6 h-0.5 bg-foreground" />
+          <motion.span animate={{ rotate: mobileOpen ? 45 : 0, y: mobileOpen ? 8 : 0 }} className="block w-5 h-px bg-foreground" />
+          <motion.span animate={{ opacity: mobileOpen ? 0 : 1 }} className="block w-5 h-px bg-foreground" />
+          <motion.span animate={{ rotate: mobileOpen ? -45 : 0, y: mobileOpen ? -8 : 0 }} className="block w-5 h-px bg-foreground" />
         </button>
       </div>
 
@@ -63,14 +61,14 @@ const Navigation = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass-surface border-t border-border/50"
+            className="md:hidden bg-background/95 backdrop-blur-xl border-t border-border/30"
           >
-            <div className="flex flex-col gap-4 p-6">
+            <div className="flex flex-col gap-6 p-8">
               {navItems.map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollTo(item)}
-                  className="text-left text-lg font-mono text-muted-foreground hover:text-primary transition-colors"
+                  className="text-left text-2xl font-semibold text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {item}
                 </button>

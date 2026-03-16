@@ -1,74 +1,64 @@
 import { motion } from 'framer-motion';
 
-const stats = [
-  { label: 'Projects Built', value: '15+' },
-  { label: 'Technologies', value: '12+' },
-  { label: 'Avg LCP', value: '0.12s' },
-  { label: 'Uptime', value: '99.9%' },
-];
-
 const AboutSection = () => {
   return (
-    <section id="about" className="relative py-32 overflow-hidden">
+    <section id="about" className="relative py-24 md:py-40 overflow-hidden">
       <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8 }}
-        >
-          <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary mb-4">// ABOUT</p>
-          <h2 className="text-3xl md:text-5xl font-mono font-bold tracking-tighter mb-8">
-            Building the <span className="gradient-text">future</span> of the web
-          </h2>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-16">
+          {/* Left col — large serif quote */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-6"
+            transition={{ duration: 0.8 }}
+            className="md:col-span-7"
           >
-            <p className="text-muted-foreground leading-relaxed text-lg">
-              I'm a Computer Science student passionate about crafting high-performance web applications 
-              and exploring the intersection of AI and software engineering.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Specializing in the MERN stack, I build full-stack applications with a focus on 
-              system design, scalability, and exceptional user experience. When I'm not coding, 
-              you'll find me solving competitive programming challenges or training ML models.
-            </p>
-            <div className="flex flex-wrap gap-3 pt-4">
-              {['MERN Stack', 'AI/ML', 'System Design', 'Competitive Programming'].map((tag) => (
-                <span key={tag} className="px-3 py-1 text-xs font-mono uppercase tracking-wider text-primary border border-primary/20 rounded-full bg-primary/5">
-                  {tag}
-                </span>
-              ))}
+            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary mb-8">About</p>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-8">
+              I care about <span className="font-serif-italic text-primary">craft</span>, 
+              {' '}performance, and making things that{' '}
+              <span className="font-serif-italic text-primary">feel</span> right.
+            </h2>
+            <div className="space-y-5 max-w-lg">
+              <p className="text-muted-foreground leading-relaxed">
+                I'm a CS student who fell in love with building for the web. 
+                I obsess over the details — from pixel-perfect interfaces to the architecture underneath.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Right now I'm deep into the MERN stack, exploring how AI can augment 
+                developer workflows, and solving problems on Codeforces when I need a break.
+              </p>
             </div>
           </motion.div>
 
+          {/* Right col — personal details */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="grid grid-cols-2 gap-4"
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="md:col-span-5 md:pt-24"
           >
-            {stats.map((stat, i) => (
-              <div key={stat.label} className="glass-surface rounded-xl p-6 glow-border">
+            <div className="space-y-6">
+              {[
+                { label: 'Currently', value: 'CS Student & Freelancer' },
+                { label: 'Focus', value: 'Full Stack · AI/ML · Systems' },
+                { label: 'Tools', value: 'React · Node · Python · MongoDB' },
+                { label: 'Fun fact', value: '500+ CP problems solved' },
+              ].map((item, i) => (
                 <motion.div
-                  initial={{ scale: 0.8 }}
-                  whileInView={{ scale: 1 }}
+                  key={item.label}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.5 + i * 0.1, type: 'spring' }}
+                  transition={{ delay: 0.4 + i * 0.1 }}
+                  className="flex flex-col gap-1 pb-4 border-b border-border/50"
                 >
-                  <p className="text-3xl font-mono font-bold gradient-text">{stat.value}</p>
-                  <p className="text-xs font-mono text-muted-foreground uppercase tracking-wider mt-2">{stat.label}</p>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">{item.label}</span>
+                  <span className="text-foreground text-sm">{item.value}</span>
                 </motion.div>
-              </div>
-            ))}
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>

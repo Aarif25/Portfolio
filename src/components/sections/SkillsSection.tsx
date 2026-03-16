@@ -1,64 +1,71 @@
 import { motion } from 'framer-motion';
 
-const skills = [
-  { name: 'JavaScript', level: 90 },
-  { name: 'React', level: 88 },
-  { name: 'Node.js', level: 85 },
-  { name: 'MongoDB', level: 80 },
-  { name: 'Express', level: 82 },
-  { name: 'Python', level: 78 },
-  { name: 'Machine Learning', level: 70 },
-  { name: 'Three.js', level: 65 },
-  { name: 'TypeScript', level: 85 },
-  { name: 'Git', level: 88 },
-  { name: 'Docker', level: 60 },
-  { name: 'System Design', level: 72 },
+const skillGroups = [
+  {
+    category: 'Frontend',
+    skills: ['JavaScript', 'TypeScript', 'React', 'Three.js', 'Tailwind CSS', 'Framer Motion'],
+  },
+  {
+    category: 'Backend',
+    skills: ['Node.js', 'Express', 'Python', 'MongoDB', 'PostgreSQL', 'Redis'],
+  },
+  {
+    category: 'AI & ML',
+    skills: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'NLP', 'Computer Vision'],
+  },
+  {
+    category: 'Tools',
+    skills: ['Git', 'Docker', 'Linux', 'Figma', 'Vercel', 'AWS'],
+  },
 ];
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="relative py-32 overflow-hidden">
+    <section id="skills" className="relative py-24 md:py-40 overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8 }}
+          className="mb-20"
         >
-          <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary mb-4">// SKILLS</p>
-          <h2 className="text-3xl md:text-5xl font-mono font-bold tracking-tighter mb-16">
-            Tech <span className="gradient-text">Arsenal</span>
+          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary mb-4">Skills</p>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+            What I work <span className="font-serif-italic text-primary">with</span>
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {skills.map((skill, i) => (
+        <div className="grid md:grid-cols-2 gap-x-16 gap-y-12">
+          {skillGroups.map((group, gi) => (
             <motion.div
-              key={skill.name}
+              key={group.category}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.05, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              whileHover={{ scale: 1.05, y: -4 }}
-              className="skill-item glass-surface rounded-xl p-5 group cursor-default"
+              transition={{ delay: gi * 0.1, duration: 0.6 }}
             >
-              <div className="flex items-center justify-between mb-3">
-                <span className="font-mono text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                  {skill.name}
-                </span>
-                <span className="text-xs font-mono text-muted-foreground">{skill.level}%</span>
-              </div>
-              <div className="h-1 rounded-full bg-muted overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${skill.level}%` }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 + i * 0.05, duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                  className="h-full rounded-full"
-                  style={{
-                    background: `linear-gradient(90deg, hsl(195 90% 55%), hsl(270 60% 50%))`,
-                  }}
-                />
+              <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5 pb-3 border-b border-border/50">
+                {group.category}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {group.skills.map((skill, si) => (
+                  <motion.span
+                    key={skill}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: gi * 0.1 + si * 0.04 }}
+                    whileHover={{ 
+                      y: -2, 
+                      borderColor: 'hsl(38 92% 60% / 0.5)',
+                      color: 'hsl(38 92% 60%)',
+                    }}
+                    className="px-4 py-2 text-sm text-foreground border border-border rounded-full cursor-default transition-colors"
+                  >
+                    {skill}
+                  </motion.span>
+                ))}
               </div>
             </motion.div>
           ))}

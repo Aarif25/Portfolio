@@ -15,14 +15,20 @@ const Index = () => {
   return (
     <>
       {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
+      <div className="noise-overlay" />
       <CustomCursor />
       <Navigation />
       <main>
         <HeroSection />
+        <div className="divider-line" />
         <AboutSection />
+        <div className="divider-line" />
         <SkillsSection />
+        <div className="divider-line" />
         <ProjectsSection />
+        <div className="divider-line" />
         <ExperienceSection />
+        <div className="divider-line" />
         <ContactSection />
       </main>
     </>

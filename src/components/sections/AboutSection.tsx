@@ -21,12 +21,12 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-5 max-w-lg">
               <p className="text-muted-foreground leading-relaxed">
-                I'm a CS student who fell in love with building for the web. 
-                I obsess over the details — from pixel-perfect interfaces to the architecture underneath.
+                I'm a 3rd year CS student who fell in love with building for the web. 
+                I obsess over the details from pixel-perfect interfaces to the architecture underneath.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Right now I'm deep into the MERN stack, exploring how AI can augment 
-                developer workflows, and solving problems on Codeforces when I need a break.
+                developer workflows, and solving problems on Leetcode when I need a break.
               </p>
             </div>
           </motion.div>
@@ -44,7 +44,7 @@ const AboutSection = () => {
                 { label: 'Currently', value: 'CS Student & Freelancer' },
                 { label: 'Focus', value: 'Full Stack · AI/ML · Systems' },
                 { label: 'Tools', value: 'React · Node · Python · MongoDB' },
-                { label: 'Fun fact', value: '500+ CP problems solved' },
+                { label: 'Fun fact', value: '700+ CP problems solved' },
               ].map((item, i) => (
                 <motion.div
                   key={item.label}

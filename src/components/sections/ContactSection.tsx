@@ -33,9 +33,10 @@ const ContactSection = () => {
             </p>
             <div className="space-y-3">
               {[
-                { label: 'GitHub', href: 'https://github.com/aarifmansoori', handle: '@aarifmansoori' },
-                { label: 'LinkedIn', href: 'https://linkedin.com/in/aarifmansoori', handle: '/in/aarifmansoori' },
-                { label: 'Email', href: 'mailto:aarif@example.com', handle: 'aarif@example.com' },
+                { label: 'GitHub', href: 'https://github.com/aarif25', handle: '@aarif25' },
+                { label: 'LinkedIn', href: 'https://www.linkedin.com/in/aarif-mansoori-615b37329/', handle: '/in/aarifmansoori' },
+                { label: 'Email', href: 'mailto:aarifmansoori2508@gmail.com', handle: 'aarifmansoori2508@gmail.com' },
+                { label: 'leetcode', href: 'https://leetcode.com/aarifmansoori', handle: '/aarifmansoori' },
               ].map((s) => (
                 <a
                   key={s.label}

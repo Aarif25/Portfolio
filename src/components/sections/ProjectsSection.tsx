@@ -12,37 +12,54 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'Neural Dashboard',
-    description: 'Real-time ML model monitoring dashboard with WebSocket data streaming, interactive visualizations, and automated alerts for model drift detection.',
-    tech: ['React', 'Python', 'TensorFlow', 'WebSocket'],
-    github: '#',
+    title: 'Sign Language Translator',
+    description: 'Real-time sign language recognition and translation app using a custom-trained CNN model, WebSocket streaming, and a React frontend for seamless communication between deaf and hearing users.',
+    tech: ['React', 'Python', 'TensorFlow', 'MediaPipe'],
+    github: 'https://github.com/Aarif25/Sign-Language-translator',
     live: '#',
     number: '01',
   },
   {
-    title: 'CloudSync API',
-    description: 'Scalable REST API with microservices architecture, JWT authentication, rate limiting, and comprehensive test coverage for cloud file synchronization.',
-    tech: ['Node.js', 'Express', 'MongoDB', 'Docker'],
-    github: '#',
+    title: 'LocalEyes',
+    description: 'LocalEyes is a crowdsourced obstacle-reporting app designed to help people navigate roads more safely and efficiently. Users can report obstacles like potholes, waterlogging, fallen trees, debris, or construction work by simply uploading a photo or entering a short description.',
+    tech: ['React','Gemini','Node.js', 'Express', 'MongoDB', 'Vercel'],
+    github: 'https://github.com/Aarif25/LocalEyes',
     live: '#',
     number: '02',
   },
   {
-    title: 'DevFlow',
-    description: 'Full-stack project management platform with real-time collaboration, Kanban boards, sprint planning, and integrated CI/CD pipeline monitoring.',
-    tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Redis'],
-    github: '#',
+    title: 'College Technical and Academic Placement Assessment System',
+    description: 'A comprehensive system for assessing and placing students in appropriate technical and academic programs based on their coding skills and interests.',
+    tech: ['React', 'Node.js', 'Express', 'MongoDB','Python', 'Vercel'],
+    github: 'https://github.com/Aarif25/coding_analyst',
     live: '#',
     number: '03',
   },
   {
-    title: 'PixelForge',
-    description: 'AI-powered image generation and editing tool using diffusion models, with a WebGL-based canvas for real-time style transfer and compositing.',
-    tech: ['React', 'Three.js', 'Python', 'CUDA'],
-    github: '#',
-    live: '#',
+    title: 'Portfolio',
+    description: 'Personal portfolio website showcasing projects, skills, and experience.',
+    tech: ['React', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
+    github: 'https://github.com/Aarif25/luminous-canvas',
+    live: '',
     number: '04',
   },
+  {
+    title: 'Simon Says',
+    description: 'Simon Says is a web-based memory game that challenges players to remember and replicate increasingly complex sequences of colors and sounds.',
+    tech: ['React'],
+    github: 'https://github.com/Aarif25/Simon-says',
+    live: '#',
+    number: '05',
+  },
+  {
+    title: 'Women Safety App',
+    description: 'A web application designed to enhance the safety of women by providing features such as real-time location tracking, emergency SOS alerts, and a community reporting system for unsafe areas.',
+    tech: ['React', 'Node.js', 'Express'],
+    github: 'https://github.com/Aarif25/Women-Safety-App',
+    live: '#',
+    number: '06',
+  }
+
 ];
 
 const ProjectCard = ({ project, onClick }: { project: Project; onClick: () => void }) => {

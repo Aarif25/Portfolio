@@ -2,9 +2,7 @@ import { motion } from 'framer-motion';
 
 const timeline = [
   { year: '2024', title: 'Full Stack Developer', org: 'Freelance & Open Source', desc: 'Building production-grade web apps and contributing to open-source ML tooling.' },
-  { year: '2023', title: 'AI/ML Research', org: 'University Lab', desc: 'Developed neural network models for NLP tasks. Published findings on transformer optimization.' },
-  { year: '2023', title: 'Backend Developer Intern', org: 'Tech Startup', desc: 'Designed microservices architecture handling 10K+ requests/min with Node.js and Redis.' },
-  { year: '2022', title: 'Competitive Programming', org: 'CodeForces & LeetCode', desc: 'Solved 500+ problems. Specialized in graph algorithms and dynamic programming.' },
+  { year: '2025', title: 'Competitive Programming', org: 'CodeForces & LeetCode', desc: 'Solved 700+ problems. Specialized in medium-difficulty algorithmic challenges.' },
 ];
 
 const ExperienceSection = () => {

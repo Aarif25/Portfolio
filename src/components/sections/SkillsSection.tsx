@@ -7,15 +7,15 @@ const skillGroups = [
   },
   {
     category: 'Backend',
-    skills: ['Node.js', 'Express', 'Python', 'MongoDB', 'PostgreSQL', 'Redis'],
+    skills: ['Node.js', 'Express', 'Python', 'MongoDB', 'SQL', ],
   },
   {
-    category: 'AI & ML',
-    skills: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'NLP', 'Computer Vision'],
+    category: 'Compettitive Programming',
+    skills: ['Java', 'Data Structures', 'Algorithms'],
   },
   {
     category: 'Tools',
-    skills: ['Git', 'Docker', 'Linux', 'Figma', 'Vercel', 'AWS'],
+    skills: ['Git',  'Figma', 'Vercel', 'AWS'],
   },
 ];
 

@@ -12,21 +12,22 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: 'LocalEyes',
+    description: 'LocalEyes is a crowdsourced obstacle-reporting app designed to help people navigate roads more safely and efficiently. Users can report obstacles like potholes, waterlogging, fallen trees, debris, or construction work by simply uploading a photo or entering a short description.',
+    tech: ['React','Gemini','Node.js', 'Express', 'MongoDB', 'Vercel'],
+    github: 'https://github.com/Aarif25/LocalEyes',
+    live: 'https://local-eye-frontend.vercel.app/',
+    number: '01',
+  },
+  {
     title: 'Sign Language Translator',
     description: 'Real-time sign language recognition and translation app using a custom-trained CNN model, WebSocket streaming, and a React frontend for seamless communication between deaf and hearing users.',
     tech: ['React', 'Python', 'TensorFlow', 'MediaPipe'],
     github: 'https://github.com/Aarif25/Sign-Language-translator',
     live: '#',
-    number: '01',
-  },
-  {
-    title: 'LocalEyes',
-    description: 'LocalEyes is a crowdsourced obstacle-reporting app designed to help people navigate roads more safely and efficiently. Users can report obstacles like potholes, waterlogging, fallen trees, debris, or construction work by simply uploading a photo or entering a short description.',
-    tech: ['React','Gemini','Node.js', 'Express', 'MongoDB', 'Vercel'],
-    github: 'https://github.com/Aarif25/LocalEyes',
-    live: '#',
     number: '02',
   },
+  
   {
     title: 'College Technical and Academic Placement Assessment System',
     description: 'A comprehensive system for assessing and placing students in appropriate technical and academic programs based on their coding skills and interests.',

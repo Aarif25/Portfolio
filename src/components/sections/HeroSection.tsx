@@ -19,10 +19,10 @@ const HeroSection = () => {
           className="absolute top-8 md:top-12 left-6 right-6 flex justify-between items-start"
         >
           <p className="font-mono text-[10px] md:text-xs text-muted-foreground tracking-[0.2em] uppercase">
-            Portfolio — 2024/26
+        
           </p>
           <p className="font-mono text-[10px] md:text-xs text-muted-foreground tracking-[0.2em] uppercase hidden md:block">
-            Based in India
+            Based in Bhopal
           </p>
         </motion.div>
 

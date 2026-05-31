@@ -44,7 +44,7 @@ const AboutSection = () => {
                 { label: 'Currently', value: 'CS Student & Freelancer' },
                 { label: 'Focus', value: 'Full Stack · AI/ML · Systems' },
                 { label: 'Tools', value: 'React · Node · Python · MongoDB' },
-                { label: 'Fun fact', value: '700+ CP problems solved' },
+                { label: 'Fun fact', value: '850+ CP problems solved' },
               ].map((item, i) => (
                 <motion.div
                   key={item.label}

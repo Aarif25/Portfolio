@@ -12,12 +12,20 @@ interface Project {
 
 const projects: Project[] = [
   {
+  title: 'ESP32 WiFi CSI Human Presence Detection System',
+  description: 'A real-time wireless human presence detection system built using ESP32 WiFi Channel State Information (CSI) and Machine Learning. The system analyzes WiFi signal disturbances to detect human presence without cameras, wearables, or traditional motion sensors. Features include real-time CSI streaming, sequence-based signal processing, Random Forest classification, a live monitoring dashboard, confidence scoring, intrusion alerts, and event logging.',
+  tech: ['ESP32', 'Python', 'Scikit-learn', 'NumPy', 'Pandas', 'PySerial', 'Streamlit', 'Plotly'],
+  github: 'https://github.com/Aarif25/Anti-Theft-Project-using-esp32-and-wifi.',
+  live: '',
+  number: '01',
+ },
+  {
     title: 'LocalEyes',
     description: 'LocalEyes is a crowdsourced obstacle-reporting app designed to help people navigate roads more safely and efficiently. Users can report obstacles like potholes, waterlogging, fallen trees, debris, or construction work by simply uploading a photo or entering a short description.',
     tech: ['React','Gemini','Node.js', 'Express', 'MongoDB', 'Vercel'],
     github: 'https://github.com/Aarif25/LocalEyes',
     live: 'https://local-eye-frontend.vercel.app/',
-    number: '01',
+    number: '02',
   },
   {
     title: 'Sign Language Translator',
@@ -25,7 +33,7 @@ const projects: Project[] = [
     tech: ['React', 'Python', 'TensorFlow', 'MediaPipe'],
     github: 'https://github.com/Aarif25/Sign-Language-translator',
     live: '#',
-    number: '02',
+    number: '03',
   },
   
   {
@@ -34,15 +42,15 @@ const projects: Project[] = [
     tech: ['React', 'Node.js', 'Express', 'MongoDB','Python', 'Vercel'],
     github: 'https://github.com/Aarif25/coding_analyst',
     live: '#',
-    number: '03',
+    number: '04',
   },
   {
     title: 'Portfolio',
     description: 'Personal portfolio website showcasing projects, skills, and experience.',
     tech: ['React', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
     github: 'https://github.com/Aarif25/luminous-canvas',
-    live: '',
-    number: '04',
+    live: 'https://aarifcodes.vercel.app/',
+    number: '05',
   },
   {
     title: 'Simon Says',
@@ -50,7 +58,7 @@ const projects: Project[] = [
     tech: ['React'],
     github: 'https://github.com/Aarif25/Simon-says',
     live: '#',
-    number: '05',
+    number: '06',
   },
   {
     title: 'Women Safety App',
@@ -58,7 +66,15 @@ const projects: Project[] = [
     tech: ['React', 'Node.js', 'Express'],
     github: 'https://github.com/Aarif25/Women-Safety-App',
     live: '#',
-    number: '06',
+    number: '07',
+  },
+  {
+    title: 'Gate Prep Tracker',
+    description: 'A web application that helps students prepare for the GATE exam by providing study materials, practice questions, and a personalized study plan based on their strengths and weaknesses.',
+    tech: ['React'],
+    github: 'https://github.com/Aarif25/gate-prep-compass',
+    live: 'https://imranalikhan.vercel.app/',
+    number: '08',
   }
 
 ];

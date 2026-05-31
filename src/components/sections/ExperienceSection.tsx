@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const timeline = [
   { year: '2024', title: 'Full Stack Developer', org: 'Freelance & Open Source', desc: 'Building production-grade web apps and contributing to open-source ML tooling.' },
-  { year: '2025', title: 'Competitive Programming', org: 'CodeForces & LeetCode', desc: 'Solved 700+ problems. Specialized in medium-difficulty algorithmic challenges.' },
+  { year: '2025', title: 'Competitive Programming', org: 'CodeForces & LeetCode', desc: 'Solved 850+ problems. Specialized in medium-difficulty algorithmic challenges.' },
 ];
 
 const ExperienceSection = () => {
